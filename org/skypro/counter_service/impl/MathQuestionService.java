@@ -13,17 +13,11 @@ import java.util.*;
 @Service
 public class MathQuestionService implements QuestionService {
 
-    private static QuestionRepository repository;
+    public static QuestionRepository repository;
 
     public MathQuestionService(@Qualifier("mathQuestionRepository") QuestionRepository repository) {
         this.repository = repository;
     }
-
-    public static int greet(String name) {
-        return 0;
-    }
-
-
 
 
     @Override

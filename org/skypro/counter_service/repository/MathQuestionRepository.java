@@ -15,11 +15,6 @@ public class MathQuestionRepository implements QuestionRepository {
 
     private Set<Question> mathQuestions = new HashSet<>();
 
-    public static String greet(String name) {
-        return name;
-    }
-
-
     @Override
     public Question add(String question, String answer) {
         Question newQuestion = new Question(question, answer);

@@ -17,7 +17,7 @@ public class ExaminerServiceImpl implements ExaminerService {
 
     private final QuestionService javaQuestionService;
     private final QuestionService mathQuestionService;
-
+    private final Random random = new Random();
     public ExaminerServiceImpl(@Qualifier("javaQuestionService") QuestionService javaQuestionService,
                                @Qualifier("mathQuestionService") QuestionService mathQuestionService) {
         this.javaQuestionService = javaQuestionService;
