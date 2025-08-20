@@ -2,6 +2,8 @@ package java.ru.hogwarts.school.model;
 
 import jakarta.persistence.*;
 import java.util.List;
+import java.util.Objects;
+
 
 @Entity
 public class Faculty {
@@ -13,13 +15,57 @@ public class Faculty {
 
     @OneToMany(mappedBy = "faculty")
     private List<Student> students;
+    public Long getId() {
+        return id;
+    }
 
-    public Long getId() { return id; }
-    public void setId(Long id) { this.id = id; }
-    public String getName() { return name; }
-    public void setName(String name) { this.name = name; }
-    public String getColor() { return color; }
-    public void setColor(String color) { this.color = color; }
-    public List<Student> getStudents() { return students; }
-    public void setStudents(List<Student> students) { this.students = students; }
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public List<Student> getStudents() {
+        return students;
+    }
+
+    public void setStudents(List<Student> students) {
+        this.students = students;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Faculty faculty = (Faculty) o;
+        return Objects.equals(id, faculty.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
+
+    @Override
+    public String toString() {
+        return "Faculty{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", color='" + color + '\'' +
+                '}';
+    }
 }
