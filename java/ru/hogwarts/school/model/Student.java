@@ -14,6 +14,10 @@ public class Student {
     @ManyToOne
     @JoinColumn(name = "faculty_id")
     private Faculty faculty;
+
+    public Student(Object o, String harryPotter, int i, Faculty gryffindor) {
+    }
+
     // Геттеры, сеттеры, equals, hashCode, toString
     public Long getId() {
         return id;
