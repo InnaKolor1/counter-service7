@@ -16,14 +16,14 @@ public class BookService {
         books.put(lastId, book);
         return book;
     }
-public Book findBook(long id){
+    public Book findBook(long id){
         return books.get(id);
-}
-public Book editBook (Book book){
+    }
+    public Book editBook (Book book){
         books.put(book.getId(),book);
         return book;
-}
-public Book deleteBook(long id){
+    }
+    public Book deleteBook(long id){
         return books.remove(id);
-}
+    }
 }

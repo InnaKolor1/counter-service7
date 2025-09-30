@@ -18,7 +18,7 @@ public class BookController {
     }
     @GetMapping("{id}") //GET http//localhost:8080/books/6
     public Book getBookInfo(@PathVariable Long id){
-return bookService.findBook(id);
+        return bookService.findBook(id);
     }
     @PostMapping //POST http//localhost:8080/books
     public Book createBook(Book book){
