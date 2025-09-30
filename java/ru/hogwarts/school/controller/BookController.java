@@ -7,6 +7,7 @@ import java.ru.hogwarts.school.service.BookService;
 
 import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
 
+
 @RestController
 @RequestMapping("books")
 public class BookController {

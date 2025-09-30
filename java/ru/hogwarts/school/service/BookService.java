@@ -11,7 +11,6 @@ public class BookService {
 
     private long lastId = 1;
 
-
     public Book createBook(Book book) {
         book.setId(++lastId);
         books.put(lastId, book);
